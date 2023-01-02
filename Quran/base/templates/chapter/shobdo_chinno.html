@@ -1,0 +1,182 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>হরকত</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">হরকত</div>
+      <div class="ptext">
+        <p>যের  ــِ , যাবার  ـَ ও পেশ  ــُ  কে হারকাত বলা হয়। হারকাত এর কাজ বাংলা ‘আ’ কার ‘ও’ কার এবং ‘ই’ কার এর মতো। যাবার মানে (আ), যের মানে (ে)
+          পেশ মানে (ু)। উদাহরণ স্বরুপ ب অক্ষরে যাবার দিলে উচ্চারণ হবে بَ  'বা', যের দিলে উচ্চারণ হবে بِ  'বি' এবং পেশ দিলে উচ্চারণ হবে بُ  'বু'।
+          এভাবে হারকাত অক্ষরগুলোর সাথে যুক্ত হয়ে একটি নতুন উচ্চারণ গঠন করে। এই নতুন উচ্চারণ গঠন করাই হারকাতের কাজ। <br>
+          
+          যেমন ঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="ta_ti_tu.play()">تَ تِ تُ - كَ كِ كُ - بَ بِ بُ</button>
+
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white">সাকিন</div>
+      <div class="ptext">
+        <p>আরবী অক্ষরগুলোকে একটির সাথে আরেকটিকে যুক্ত করতে যে চিহ্ন <button class="btn btn-outline-primary">٨</button>ব্যবহার করা হয় তাকে সুকুন, সাকিন বা জযম বলা হয়। বাংলায় ্ (হসন্ত) দিয়ে যেভাবে উচ্চারণ করা হয়, সাকিন আরবীতে সেরকম উচ্চারণ করায়।
+           যেমন এই শব্দটিতে <button class="btn btn-outline-primary">قَدْ</button> হলুদ সাকিন নীল ক্বফ'কে লাল দালে'র সাথে যুক্ত করে উচ্চারণ গঠন করেছে 'ক্বদ্'। 
+
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white"> আরজি সাকিন</div>
+      <div class="ptext">
+        <p>দম ফেলা বা থামার স্থানে যদি যের, যাবার, পেশ, দুই যের, দুই পেশ ও ‘গোল হা’-এ খাড়া যের ও উল্টা পেশ থাকে। 
+          তাহলে এগুলো না পড়ে এগুলোর স্থানে সাকিন ধরে পড়তে হবে, এই ধরে নেয়া সাকিনকেই আরজি সাকিন বলা হয়। যেমন <button class="btn btn-outline-primary" style="font-size:large" onclick="nastain.play()">نَسْتَعِىْنُ</button> শব্দটির শেষ অক্ষরে পেশ আছে তাই এখানে দম ফেললে শব্দটির উচ্চারণ নাস্তাঈ-নু না হয়ে হবে <button class="btn btn-outline-primary" style="font-size:large" onclick="nastain.play()">نَسْتَعِىْنْ</button> নাস্তাঈ--ন্। 
+          এটাই আরজি বা মনে মনে ধরা সাকিন। ব্যতিক্রম: শেষ অক্ষরে দুই যাবার বা মাদ থাকলে আরজি সাকিন হয় না। পরে দেখানো হবে।
+
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white">তাশদীদ</div>
+      <div class="ptext" style="color:white">
+        <p>তাশদীদ ( ّ)একই অক্ষরকে দুবার ও এক শব্দকে আরেক শব্দের সাথে যুক্ত করতে ব্যবহৃত হয়।
+          যেমন ঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="muhammad.play()">محمّد</button>
+                <button class="btn btn-outline-primary" style="font-size:large" onclick="talaffaj.play()">تلفّظ</button>
+                <button class="btn btn-outline-primary" style="font-size:large" onclick="mulkus.play()">ّمُلْكُ السَّمَواتِ</button>
+
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white">তানবিন</div>
+      <div class="ptext">
+        <p>  দুই যাবার, দুই পেশ, ও  দুই যের’কে তানবীন বলা হয় (بً بٍ بٌ)। তানবীনের ভিতরে নুন সাকিন লুকায়িত থাকে। 
+          অর্থাৎ দুই যাবার, দুই যের ও দুই পেশের প্রথমটি হারকাত (যাবার, যের, পেশ) আর দ্বিতীয়টি নুন সাকিন। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="tan_tin_tun.play()">تً تٍ تٌ - بً بٍ بٌ</button>
+          <br><br>
+          থামা বা দম ফেলার স্থানে যদি দুই যাবার থাকে তাহলে দুই পেশ ও দুই যেরের মতো আরজি সাকিন করা যাবে না। 
+          দুই যাবারে দম ফেললে এক আলিফ মাদ করে দম ফেলতে হবে, একে মাদে এওয়াজ বলে। <button class="btn btn-outline-primary" style="font-size:large" onclick="marhaba.play()">مَرْحَبًا</button>
+
+        </p><br><hr>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    const ta_ti_tu = new Audio()
+    ta_ti_tu.src = "{% static 'audio/shobdo/ta_ti_tu.m4a' %}"
+
+    const nastain = new Audio()
+    nastain.src = "{% static 'audio/shobdo/nastain.m4a' %}"
+
+    const mulkus = new Audio()
+    mulkus.src = "{% static 'audio/shobdo/mulkus.m4a' %}"
+
+    const talaffaj = new Audio()
+    talaffaj.src = "{% static 'audio/shobdo/talaffaj.m4a' %}"
+
+    const muhammad = new Audio()
+    muhammad.src = "{% static 'audio/shobdo/muhammad.m4a' %}"
+
+    const tan_tin_tun = new Audio()
+    tan_tin_tun.src = "{% static 'audio/shobdo/tan_tin_tun.m4a' %}"
+
+    const marhaba = new Audio()
+    marhaba.src = "{% static 'audio/shobdo/marhaba.m4a' %}"
+  </script>
+</body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,145 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>গুন্নাহ</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .text {
+      color:white;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">গুন্নাহ</div>
+      <div class="ptext">
+        <p>image_pdf
+          গুন্নাহ্‌ এর পরিচয়
+          কুরআন মাজিদ সহীহ শুদ্ধভাবে তিলাওয়াতের একটি নিয়ম হল গুন্নাহ্‌।নাক ব্যবহার করে উচ্চারণকে গুন্নাহ্‌ বলে। 
+          আরবি হরফ ২৯ টি।এর মাঝে গুন্নাহ্‌র হরফ ২ টি। ن ও م গুন্নাহর হরফ।
+          গুন্নাহ করা ওয়াজিব।গুন্নাহর স্থলে কমপক্ষে এক আলিফ পরিমাণ লম্বা করতে হয়।কুরআন মাজিদ তিলাওয়াতের 
+          ক্ষেত্রে গুন্নাহর গুরুত্ব অপরিসীম।আমরা তিলাওয়াতের সময় যথাস্থানে গুন্নাহ করব। নিচে গুন্নাহ্‌ সম্পর্কে সবিস্তারে আলোচনা পেশ করা হল। <br>
+          
+          যেমন ঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="annas.play()">اَالنَّاسْ</button>
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white">ওয়াজিব গুন্নাহ</div>
+      <div class="ptext">
+        <p>হরকতের পরে (এক যবর, এক যের, এক পেশস) মী-মে বা নূ-নে তাশদীদ হইলে উহাকে ওয়াজিব গুন্নাহ্‌ বলে।যেমনঃ
+           <button class="btn btn-outline-primary" style="font-size:large" onclick="anna.play()">اَنَّ-اِنّ-اُنَّ  اَمَّ- اَمِّ-اَمُّ</button>  
+
+        </p><br><hr>
+        
+      </div>
+
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    const annas = new Audio()
+    annas.src = "{% static 'audio/gunnah/annas.m4a' %}"
+
+    const anna = new Audio()
+    anna.src = "{% static 'audio/gunnah/anna.m4a' %}"
+
+  </script>
+</body>
+</html>
+
+{% endblock content %}

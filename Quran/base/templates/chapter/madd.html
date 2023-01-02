@@ -1,0 +1,203 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>মদ্দ পরিচিতি</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">মদ্দ কাকে বলে ?</div>
+      <div class="ptext">
+        <p>মাদ অর্থ লম্বা করে টেনে পড়া যেমন ‘আমিন’ শব্দটি যদি ‘আ-মি-ন’ পড়া হয় তাহলে এটি মাদ করা হলো।
+           <br><br>
+          <h5>মাদ কত প্রকার ও কি কি?</h5>
+          মাদ প্রধানত দুই প্রকার ১) মাদে আসলী বা আসল মাদ এবং ২) মাদে ফারয়ী।<br>
+
+          মাদে আসলী'কে মৌলিক বা আসল মাদ বলা হয় কারণ এই মাদ থেকেই অন্যান্য মাদের উ‌ৎপত্তি। অন্যদিকে ফারয়ী অর্থ ‘শাখা-প্রশাখা’। 
+          মাদে আসলী থেকে শাখা প্রশাখা বের হয়ে যেসব মাদ গঠন হয় সেগুলোকে মাদে ফারয়ী বলে। ফারয়ী মাদের সংখ্যা অনেক হতে পারে। <br>
+
+          মাদে আসলী ও ফারয়ীসহ মাদ সাধারণত ১২ প্রকার । 
+          যেমন: ১) মাদে আসলী, ২) মাদে এওয়াজ, ৩) মাদে মুত্তাসিল, ৪) মাদে মুংফাসিল, ৫) মাদে আরজী, ৬) মাদে লীন, ৭) মাদে সিলায় তবিলা, ৮) মাদে সিলায় কসীরা, ৯) মাদে লাযিম কলমী মুখাফ্ফাফ,
+           ১০) মাদে লাযিম হারফি মুখাফ্ফাফ, ১১) মাদে লাযিম কলমী মুসাক্কল এবং ১২) মাদে লাযিম হারফি মুসাক্কল।<br><br>
+
+          <h5>দীর্ঘ করার দিক থেকে মাদ ৪ প্রকার</h5>
+          মাদ কি পরিমাণ টেনে পড়তে হবে বা দীর্ঘ করতে হবে এদিক থেকে মাদ'কে চার ভাগে ভাগ করা হয় যথা; ১, ২, ৩,ও ৪ আলিফ মাদ।
+          <br><br>
+
+          <h5>১, ২, ৩ ও ৪ আলিফ মাদ বলতে কি বুঝায়?</h5>
+          একটি আলিফ অক্ষর উচ্চারণ করতে যতক্ষণ সময় লাগে ততক্ষণ টেনে পড়াকে 
+          ১ আলিফ মাদ বলা হয়। এটা প্রায় ১ সেকেন্ডের সমান অথবা হাত মুঠো করে স্বাভাবিক 
+          গতিতে একটি আঙ্গুল খুলে সোজা করার সময়টুকুই এক আলিফ মাদের সময়, এভাবে ২, ৩ ও ৪নং
+           আঙ্গুল সোজা করতে যতক্ষণ সময় লাগবে সেটাই যথাক্রমে ২, ৩ ও ৪ আলিফ মাদের সময়। সহজ 
+           ভাষায় ১ আলিফ মাদের সময় ১ সেকেন্ড হলে ২ আলিফ মাদ ২ সেকেন্ডের সমান এবং ৩ ও ৪ আলিফের 
+           মাদ যথাক্রমে ৩ ও ৪ সেকেন্ডের সমান। এটাকেই ১, ২, ৩, ও ৪ আলিফ মাদ বলা হয়। <br><br>
+
+          <h5>মাদ কোথায় করতে হয়?</h5>
+          মাদের জন্য নির্ধারিত স্থানেই মাদ করতে হয় এবং ব্যকরণগত কারণে যে স্থানে যত আলিফের মাদ নির্দেশিত সেখানে তত আলিফেরই মাদ করতে হয়, 
+          তবে ২,৩ ও ৪ আলিফের স্থানেও এক আলিফের সমান মাদ করা যেতে পারে, কিন্তু এক আলিফও মাদ না করলে অর্থের পরিবর্তন 
+          হয়ে যাবে, যে কারণে মাদের স্থানে কমপক্ষে এক আলিফের মাদ কখনোই পরিহার করা উচিৎ নয়। উদাহরস্বরুপ বলা যায়, ‘আছে’ 
+          একটি শব্দ এখন বলা হলো ‘আছে?’ লক্ষ্য করুন, ‘আছে’ শব্দটিতে শুধু প্রশ্ন বোধক আবেগ যোগ করার কারণে ‘থাকা’ কোন কিছু 
+          আছে কি নাই প্রশ্ন সাপেক্ষ হয়ে গেল! আরবী ভাষায় মাদ এরকমই ভাববোধ পরিবর্তনের কাজ করে। 
+          সুতরাং মাদের স্থানে মাদ না করলে খুব বড় ভুল হয়ে যেতে পারে। <br><br>
+        </p>
+        
+      </div>
+
+      <div class="text" style="color:white">মদের বিবরণ</div>
+      <div class="ptext">
+        <p>মাদ অর্থ লম্বা করে টেনে পড়া যেমন ‘আমিন’ শব্দটি যদি ‘আ-মি-ন’ পড়া হয় তাহলে এটি মাদ করা হলো। মাদ্দের হরফঃ  
+          মাদ্দের হরফ তিনটি। যেমনঃ ( و+ ا + ى )
+           <h4>এক আলিফ পড়ার নিয়ম</h4>
+           যবর এর বাম পাশে খালি আলিফ। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="baa.play()">بَا</button><br><br>
+           যের এর বাম পাশে যযম ওয়ালা ইয়া। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="bii.play()">بِيْ</button><br><br>
+           পেশ এর বাম পাশে যযম ওয়ালা ওয়াও। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="buu.play()">بُوْ</button><br><br>
+
+           <h4>খাড়া যবর , খাড়া যের ,উলটা পেশঃ</h4>
+           খাড়া যবর , খাড়া যের ,উলটা পেশ (ٰ ٖ ٗ) <button class="btn btn-outline-primary" style="font-size:large" onclick="rahman.play()">الرَّحْمَٰنِ</button>
+
+           <br><br>
+
+           <h4>লীনের হরফ</h4>
+           লীনের হরফ ২টি। যবর এর বাম পাশে যযম ওয়ালা ওয়াও যবর এর বাম যযম ওয়ালা ইয়া। লীনের হরফ ওয়াক্‌ফের সময় এক আলিফ টেনে পড়তে হয়। 
+           যেমন ঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="bait.play()">الْبَيْت – قُرَيْش</button>
+
+           <br><br>
+
+           <h4>তিন আলিফ মাদ্দ এর পরিচয়</h4>
+           ২  স্থানে   তিন আলিফ পরিমাণ টানতে  হয়। <br><br>
+           ১. মাদ্দের হরফ ওয়াকফের সময় তিন আলিফ টেনে পড়তে হয়।  । যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="ajim.play()">عَظِيمٌ – الْمُفْلِحُونَ</button><br><br>
+           ২. মাদ্দের হরফে উপর চিকন চিন্হ ()  আসলে  তিন আলিফ টানিয়া পড়তে হয়। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="maa.play()">مَآ أَعْبُدُ</button>
+
+           <br><br>
+
+           <h4>৪ আলিফ পড়ার নিয়ম</h4>
+           মাদ্দের হরফে উপর মোটা চিন্হ ()  আসলে  চার আলিফ টানিয়া পড়তে হয়। যেমনঃ <button class="btn btn-outline-primary" style="font-size:large" onclick="jualin.play()"> وَلَا ٱلضَّآلِّينَ</button><br><br>
+
+        </p>
+        
+      </div>
+
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    const baa = new Audio()
+    baa.src = "{% static 'audio/madd/baa.m4a' %}"
+
+    const bii = new Audio()
+    bii.src = "{% static 'audio/madd/bii.m4a' %}"
+
+    const buu = new Audio()
+    buu.src = "{% static 'audio/madd/buu.m4a' %}"
+
+    const rahman = new Audio()
+    rahman.src = "{% static 'audio/madd/rahman.m4a' %}"
+
+    const bait = new Audio()
+    bait.src = "{% static 'audio/madd/bait.m4a' %}"
+
+    const ajim = new Audio()
+    ajim.src = "{% static 'audio/madd/ajim.m4a' %}"
+
+    const maa = new Audio()
+    maa.src = "{% static 'audio/madd/maa.m4a' %}"
+
+    const jualin = new Audio()
+    jualin.src = "{% static 'audio/madd/jualin.m4a' %}"
+  </script>
+</body>
+</html>
+
+{% endblock content %}

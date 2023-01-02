@@ -1,0 +1,134 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>কুইজ</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/style_quiz.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="main-div">
+        <div class="inner-div">
+            <h2 class="question">Question comes here</h2>
+            <ul>
+                <li>
+                    <input type="radio" name = "answer" id = "ans1" class="answer">
+                    <label for="ans1" id="option1"> Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name = "answer" id = "ans2" class="answer">
+                    <label for="ans2" id="option2"> Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name = "answer" id = "ans3" class="answer">
+                    <label for="ans3" id="option3"> Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name = "answer" id = "ans4" class="answer">
+                    <label for="ans4" id="option4"> Answer Option</label>
+                </li>
+            </ul>
+            <button id="submit" class="btn btn-primary">সাবমিট</button>
+            <div id="showScore" class="scoreArea"> </div>
+
+        </div>
+    </div>
+    
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script src="{% static 'js/script_quiz.js' %}"></script>
+</body>
+</html>
+
+{% endblock content %}

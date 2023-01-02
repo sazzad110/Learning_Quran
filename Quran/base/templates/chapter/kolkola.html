@@ -1,0 +1,150 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ক্বলকলা</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">ক্বলকলা কাকে বলে ?</div>
+      <div class="ptext">
+        
+        <p>ক্বলকলা অর্থ প্রতিধ্বনি। ক্বলকলার অক্ষর ৫টি<B> د ق ط ب  ج </B>। 
+          যখন এই অক্ষরগুলোর উপর সাকিন থাকবে তখন এগুলোর উচ্চারণ একবার প্রতিধ্বনিত হয়ে থেমে যাবে, এই একবার প্রতিধ্বনি হওয়াকেই ক্বলকলা বলা হয়।
+          তার মানে এই হরফের উপর সাকিন থাকলে একটু ধাক্কা দিয়ে পড়তে হয়। আর এই হরফ গুলা একটু তারাতাড়ি পড়তে হয়।
+        
+           <br><br>
+          <h5>ق</h5>
+          ফালাক্ব্ - <button class="btn btn-outline-primary" style="font-size:large" onclick="falaq.play()">فَلَقْ</button><br><br><hr>
+
+          <h5>ط</h5>
+          শাত্বরা - <button class="btn btn-outline-primary" style="font-size:large" onclick="shatra.play()">سَطْرَ</button><br><br><hr>
+
+          <h5>ب</h5>
+          ফানষব্ব - <button class="btn btn-outline-primary" style="font-size:large" onclick="fansab.play()">فَانْصَبْ</button><br><br><hr>
+
+          <h5>ج</h5>
+          ওজ্বহিকা - <button class="btn btn-outline-primary" style="font-size:large" onclick="oajhika.play()">وَجْهِكَ</button><br><br><hr>
+
+          <h5>د</h5>
+          রদাদদ্ - <button class="btn btn-outline-primary" style="font-size:large" onclick="radad.play()">رَدَدْناَهُ</button><br><br><hr>
+          
+
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    const falaq = new Audio()
+    falaq.src = "{% static 'audio/kolkola/falaq.m4a' %}"
+
+    const shatra = new Audio()
+    shatra.src = "{% static 'audio/kolkola/shatra.m4a' %}"
+
+    const fansab = new Audio()
+    fansab.src = "{% static 'audio/kolkola/fansab.m4a' %}"
+
+    const oajhika = new Audio()
+    oajhika.src = "{% static 'audio/kolkola/oajhika.m4a' %}"
+
+    const radad = new Audio()
+    radad.src = "{% static 'audio/kolkola/radad.m4a' %}"
+  </script>
+</body>
+</html>
+
+{% endblock content %}

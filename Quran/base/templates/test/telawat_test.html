@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'styles/telawat.css' %}">
+</head>
+
+<body class="telawat_body">
+  <h1 class="telawat_h1">তেলায়াত লিস্ট</pan></h1>
+    
+    <table class="container___">
+      <thead>
+        <tr>
+          <th><h1>ইউজার</h1></th>
+          <th><h1>সুরাহ</h1></th>
+          <th><h1>আয়াত</h1></th>
+          <th><h1>সঠিকতা [out of 100%]</h1></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for telawat in telawat_list %}
+        <tr>
+          <td>{{telawat.host.name}}</td>
+          <td>{{telawat.surah}}</td>
+          <td>{{telawat.ayat}}</td>
+          <td>{{telawat.arruracy}}</td>
+        </tr>
+        {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+</body>
+
+{% endblock content %}

@@ -1,0 +1,222 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>মাখরাজ পরিচিতি</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">মাখরাজ পরিচিতি</div>
+      <div class="ptext">
+        
+        <p>মাখরাজ বলা হয় আরবী অক্ষর গুলো মুখ ও গলা'র যেসব স্থান থেকে উচ্চারিত হয় সেসব স্থানকে। ২৯টি অক্ষর উচ্চারিত হয় গলা'র ১৭টি স্থান থেকে।
+           প্রত্যেকটি অক্ষর নিজস্ব স্বকীয়তা অনুযায়ী উচ্চারিত হয়, এক অক্ষরের উচ্চারণ আরেক অক্ষরের মতো হয়ে গেলে অর্থের পরিবর্তন হয়ে যাবে। উচ্চারণের স্থান ৩ টি। ঠোট, মুখের ভেতর, কন্ঠ নালী।
+           সর্বমোট ১৭ টি মাখরাজ রয়েছে। চলুন শুরু করা যাক কিভাবে আরবি হরফ গুলা উচ্চারণ করতে হুয়।
+        
+           <br><br>
+          <h5>১ নাম্বার মাখরাজ</h5>
+          হলকের শুরু হইতে, হামযা-হা <button class="btn btn-outline-primary" onclick="hamja_ha.play()" style="font-size:large">ء ه</button><br><br><hr>
+
+          <h5>2 নাম্বার মাখরাজ</h5>
+          হলকের মধ্যখান হইতে, আইন-হা <button class="btn btn-outline-primary" onclick="ayen_ha.play()" style="font-size:large">ع- ح</button><br><br><hr>
+
+          <h5>৩ নাম্বার মাখরাজ</h5>
+          হলকের শেষ হইতে, গইন-খ <button class="btn btn-outline-primary" onclick="goin_kha.play()" style="font-size:large">غ-خ</button><br><br><hr>
+
+          <h5>৪ নাম্বার মাখরাজ</h5>
+          জিহবার গোড়া তার বরাবর উপরের তালুর সঙ্গে লাগিয়ে-কফ <button class="btn btn-outline-primary" onclick="kof.play()" style="font-size:large">ق</button><br><br><hr>
+
+          <h5>5 নাম্বার মাখরাজ</h5>
+          জিহবার গোড়া হতে একটু আগে বাড়িয়ে তার বরাবর ওপরের তালুর সঙ্গে লাগাইয়া-কাফ <button class="btn btn-outline-primary" onclick="kaf.play()" style="font-size:large">ك</button><br><br><hr>
+
+          <h5>৬ নাম্বার মাখরাজ</h5>
+          জিহবার মধ্যখান তার বরাবর উপরের তালুর সঙ্গে লাগাইয়া-ইয়া, শিন, জিম <button class="btn btn-outline-primary" onclick="jim_shin_ya.play()" style="font-size:large">ي-ش-ج</button><br><br><hr>
+
+          <h5>৭ নাম্বার মাখরাজ</h5>
+          জিহবার গোড়ার কিনারা, উপরের মাড়ির দাঁতের গোড়ার সঙ্গে লাগাইয়া-দোয়াদ <button class="btn btn-outline-primary" onclick="juad.play()" style="font-size:large">ض</button><br><br><hr>
+
+          <h5>৮ নাম্বার মাখরাজ</h5>
+          জিহবার আগার কিনারা, সামনের উপরের দাঁতের গোড়ার সঙ্গে লাগাইয়া -লাম <button class="btn btn-outline-primary" onclick="lam.play()" style="font-size:large">ل</button><br><br><hr>
+
+          <h5>৯ নাম্বার মাখরাজ</h5>
+          জিহবার আগা, তার বরাবর উপরের তালুর সঙ্গে লাগাইয়া -নূন <button class="btn btn-outline-primary" onclick="nun.play()" style="font-size:large">ن</button><br><br><hr>
+
+          <h5>১০ নাম্বার মাখরাজ</h5>
+          জিহবার আগার পিঠ, তার বরাবর উপরের তালুর সঙ্গে লাগাইয়া -রা <button class="btn btn-outline-primary" onclick="ra.play()" style="font-size:large"> ر</button><br><br><hr>
+
+          <h5>১১ নাম্বার মাখরাজ</h5>
+          জিহবার আগা, সামনের উপরের দুই দাঁতের গোড়ার সঙ্গে লাগাইয়া- তা, দাল, তোয়া <button class="btn btn-outline-primary" onclick="tua_dal_ta.play()" style="font-size:large">ت-د-ط</button><br><br><hr>
+
+          <h5>১২ নাম্বার মাখরাজ</h5>
+          জিহবার আগা, সামনের নিচের, দুই দাঁতের আগার সঙ্গে লাগাইয়া- যা, ছিন, সোয়াদ <button class="btn btn-outline-primary" onclick="suad_sin_jha.play()" style="font-size:large">ز-س-ص</button><br><br><hr>
+
+          <h5>১৩ নাম্বার মাখরাজ</h5>
+          জিহবার আগা, সামনের উপরের দু্ই দাঁতের আগার সঙ্গে লাগাইয়া- ছা, যাল, যোয়া <button class="btn btn-outline-primary" onclick="jua_jal_cha.play()" style="font-size:large">ث-ذ-ظ</button><br><br><hr>
+
+          <h5>১৪ নাম্বার মাখরাজ</h5>
+          নিচের ঠোঁটের পেট, সামনের উপরের, দুই দাঁতের আগার সঙ্গে লাগাইয়া-ফা <button class="btn btn-outline-primary" onclick="fa.play()" style="font-size:large">ف</button><br><br><hr>
+
+          <h5>১৫ নাম্বার মাখরাজ</h5>
+          দুই ঠোঁট হইতে, ওয়াও, বা, মিম উচ্চাারি হয় । (ওয়াও উচ্চারণের সময় দুই ঠোঁট গোল হবে) <button class="btn btn-outline-primary" onclick="owa_mim_ba.play()" style="font-size:large">م-ب-و</button><br><br><hr>
+
+          <h5>১৬ নাম্বার মাখরাজ</h5>
+          মুখের খালি জায়গা হইতে, মদের হরফ উচ্চারিত হয়। মাদ্দের হরফ তিনটি। ওয়াও, আলিফ ও ইয়া। যবরের বাম পাশে খালি আলিফ, পেশের বাম পাশে জযমওয়ালা ওয়াও এবং জেরের বাম পাশে জযমওয়ালা ইয়া। মাদ্দের হরফ এক আলিফ টেনে পড়তে হয়। <button class="btn btn-outline-primary" onclick="ba_bi_bu.play()" style="font-size:large">با-بُؤْ-بِئ</button><br><br><hr>
+
+          <h5>১৭ নাম্বার মাখরাজ</h5>
+          নাম্বার মাখরাজ: নাকের বাঁশী হইতে গুন্নাহ উচ্চারিত হয়। -আন্না, ইন্না, আম্মা ইত্যাদি <button class="btn btn-outline-primary" onclick="anna_amma.play()" style="font-size:large">اِنَّ-اَنَّ-اَمَّ</button><br><br><hr>
+
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    var hamja_ha = new Audio()
+    hamja_ha.src = "{% static 'audio/makhraj/hamja_ha.m4a' %}"
+
+    var ayen_ha = new Audio()
+    ayen_ha.src = "{% static 'audio/makhraj/ayen_ha.m4a' %}"
+
+    var goin_kha = new Audio()
+    goin_kha.src = "{% static 'audio/makhraj/goin_kha.m4a' %}"
+
+    var kof = new Audio()
+    kof.src = "{% static 'audio/makhraj/kof.m4a' %}"
+
+    var kaf = new Audio()
+    kaf.src = "{% static 'audio/makhraj/kaf.m4a' %}"
+
+    var jim_shin_ya = new Audio()
+    jim_shin_ya.src = "{% static 'audio/makhraj/jim_shin_ya.m4a' %}"
+
+    var juad = new Audio()
+    juad.src = "{% static 'audio/makhraj/juad.m4a' %}"
+
+    var lam = new Audio()
+    lam.src = "{% static 'audio/makhraj/lam.m4a' %}"
+
+    var nun = new Audio()
+    nun.src = "{% static 'audio/makhraj/nun.m4a' %}"
+
+    var ra = new Audio()
+    ra.src = "{% static 'audio/makhraj/ra.m4a' %}"
+
+    var tua_dal_ta = new Audio()
+    tua_dal_ta.src = "{% static 'audio/makhraj/tua_dal_ta.m4a' %}"
+
+    const suad_sin_jha = new Audio()
+    suad_sin_jha.src = "{% static 'audio/makhraj/suad_sin_jha.m4a' %}"
+
+    var jua_jal_cha = new Audio()
+    jua_jal_cha.src = "{% static 'audio/makhraj/jua_jal_cha.m4a' %}"
+
+    var fa = new Audio()
+    fa.src = "{% static 'audio/makhraj/fa.m4a' %}"
+
+    var owa_mim_ba = new Audio()
+    owa_mim_ba.src = "{% static 'audio/makhraj/owa_ba_mim.m4a' %}"
+
+    var ba_bi_bu = new Audio()
+    ba_bi_bu.src = "{% static 'audio/makhraj/ba_bu_bi.m4a' %}"
+
+    var anna_amma = new Audio()
+    anna_amma.src = "{% static 'audio/makhraj/anna_amma.m4a' %}"
+
+  </script>
+</body>
+</html>
+
+{% endblock content %}

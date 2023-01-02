@@ -1,0 +1,243 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>অক্ষর পরিচিতি</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content okkhr er jonno -->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">আরবি অক্ষর পরিচিতি</div>
+
+      <div class="okkhor">
+        <div><button onclick="jim.play()">ج</button></div>
+        <div><button onclick="cha.play()">ث</button></div>
+        <div><button onclick="ta.play()">ت</button></div>
+        <div><button onclick="ba.play()" >ب</button></div>
+        <div><button onclick="alif.play()" >ا</button></div>
+      </div>
+
+      <div class="okkhor">
+        <div><button onclick="ra.play()" >ر</button></div>
+        <div><button onclick="jal.play()" >ذ</button></div>
+        <div><button onclick="dal.play()" >د</button></div>
+        <div><button onclick="kha.play()" >خ</button></div>
+        <div><button onclick="ha.play()" >ح</button></div>
+      </div>
+
+      <div class="okkhor">
+        <div><button onclick="juad.play()">ض</button></div>
+        <div><button onclick="suad.play()">ص</button></div>
+        <div><button onclick="shin.play()">ش</button></div>
+        <div><button onclick="sin.play()">س</button></div>
+        <div><button onclick="jha.play()">ز</button></div>
+      </div>
+
+      <div class="okkhor">
+        <div><button onclick="fa.play()">ف</button></div>
+        <div><button onclick="goin.play()">غ</button></div>
+        <div><button onclick="ayen.play()">ع</button></div>
+        <div><button onclick="jua.play()">ظ</button></div>
+        <div><button onclick="tua.play()">ط</button></div>
+      </div>
+
+      <div class="okkhor">
+        <div><button onclick="nun.play()">ن</button></div>
+        <div><button onclick="min.play()">م</button></div>
+        <div><button onclick="lam.play()">ل</button></div>
+        <div><button onclick="kaf.play()">ك</button></div>
+        <div><button onclick="kof.play()">ق</button></div>
+      </div>
+
+      <div class="okkhor">
+        <div><button onclick="ya.play()">ي</button></div>
+        <div><button onclick="owa.play()">و</button></div>
+        <div><button onclick="hamja.play()">ء</button></div>
+        <div><button onclick="hah.play()">ه</button></div>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+    var alif = new Audio()
+    alif.src = "{% static 'audio/okkhor/alif.m4a' %}"
+
+    var ba = new Audio()
+    ba.src = "{% static 'audio/okkhor/ba.m4a' %}"
+
+    var ta = new Audio()
+    ta.src = "{% static 'audio/okkhor/ta.m4a' %}"
+
+    var cha = new Audio()
+    cha.src = "{% static 'audio/okkhor/cha.m4a' %}"
+
+    var jim = new Audio()
+    jim.src = "{% static 'audio/okkhor/jim.m4a' %}"
+
+    const ha = new Audio()
+    ha.src = "{% static 'audio/okkhor/ha.m4a' %}"
+
+    var kha = new Audio()
+    kha.src = "{% static 'audio/okkhor/kha.m4a' %}"
+
+    var dal = new Audio()
+    dal.src = "{% static 'audio/okkhor/dal.m4a' %}"
+
+    var jal = new Audio()
+    jal.src = "{% static 'audio/okkhor/jal.m4a' %}"
+
+    var ra = new Audio()
+    ra.src = "{% static 'audio/okkhor/ra.m4a' %}"
+
+    var jha = new Audio()
+    jha.src = "{% static 'audio/okkhor/jha.m4a' %}"
+
+    var sin = new Audio()
+    sin.src = "{% static 'audio/okkhor/sin.m4a' %}"
+
+    var shin = new Audio()
+    shin.src = "{% static 'audio/okkhor/shin.m4a' %}"
+
+    var suad = new Audio()
+    suad.src = "{% static 'audio/okkhor/suad.m4a' %}"
+
+    var juad = new Audio()
+    juad.src = "{% static 'audio/okkhor/juad.m4a' %}"
+
+    var tua = new Audio()
+    tua.src = "{% static 'audio/okkhor/tua.m4a' %}"
+
+    var jua = new Audio()
+    jua.src = "{% static 'audio/okkhor/jua.m4a' %}"
+
+    var ayen = new Audio()
+    ayen.src = "{% static 'audio/okkhor/ayen.m4a' %}"
+
+    var goin = new Audio()
+    goin.src = "{% static 'audio/okkhor/goin.m4a' %}"
+
+    var fa = new Audio()
+    fa.src = "{% static 'audio/okkhor/fa.m4a' %}"
+
+    var kof = new Audio()
+    kof.src = "{% static 'audio/okkhor/kof.m4a' %}"
+
+    var kaf = new Audio()
+    kaf.src = "{% static 'audio/okkhor/kaf.m4a' %}"
+
+    var lam = new Audio()
+    lam.src = "{% static 'audio/okkhor/lam.m4a' %}"
+
+    var min = new Audio()
+    min.src = "{% static 'audio/okkhor/mim.m4a' %}"
+
+    var nun = new Audio()
+    nun.src = "{% static 'audio/okkhor/nun.m4a' %}"
+
+    var hah = new Audio()
+    hah.src = "{% static 'audio/okkhor/hah.m4a' %}"
+
+    var hamja = new Audio()
+    hamja.src = "{% static 'audio/okkhor/hamja.m4a' %}"
+
+    var owa = new Audio()
+    owa.src = "{% static 'audio/okkhor/owa.m4a' %}"
+
+    var ya = new Audio()
+    ya.src = "{% static 'audio/okkhor/ya.m4a' %}"
+  </script>
+</body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,122 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>শুরুর কথা</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content shorur kotha -->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">কেন কুরআন শিখবেন?</div>
+      <div class="ptext">
+        
+        <p>কুরআন শিক্ষা করা <b>ফরজ</b> আর যেহেতু কুরআন তিলাওয়াত ছাড়া <b>নামাজ</b> হয় না তাই এ দুটি কারণই সবার জন্য যথেষ্ট হওয়া উচি‌ৎ।
+        কুরআন না পড়ার জন্য কিয়ামতের দিন আল্লাহ তায়ালা মানুষকে অন্ধ অবস্থায় উত্থিত করেবন। বান্দা বলবে হে আমার রব! 
+        আমি তো চক্ষুসমান ছিলাম। আল্লাহ তায়ালা বলবেন, তোমার কাছে আমার আয়াতসমূহ এসেছিল, অতঃপর তুমি সেগুলো ভুলে ছিলে। 
+        তেমনিভাবে আজ তোমাকে ভুলে যাব।”  (সূরা ত্বহা ১২৪-১২৬)
+        <br><br>
+        <h3>কুরআন পড়া নিয়ে কিছু হাদীস</h3>
+        <br> নবী সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম বলেন: “তোমাদের মাঝে সেই ব্যক্তি উত্তম যে নিজে কুরআন শিক্ষাকরে ও অন্যকে তা শিক্ষা দেয়।” (বুখারী)
+        <br><br> রাসূল সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম বলেন: “যে ব্যক্তি পবিত্র কুরআনের একটি অক্ষর পড়বে, সে একটি নেকী পাবে। আর একটি নেকী দশটি নেকীর সমপরিমাণ।” (তিরমিযী)
+        <br><br> রাসূল সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম বলেন: “যে ব্যক্তি কুরআন পাঠ করবে এবং তা মুখস্থ করবে (এবং বিধি-বিধানের) প্রতি যত্নবান হবে, সে উচ্চ সম্মানিত ফেরেশতাদের সাথে অবস্থান করবে। আর যে ব্যক্তি কষ্ট হওয়া স্বত্বেও কুরআন পাঠ করবে এবং তার সাথে নিজেকে সম্পৃক্ত রাখবে সে দ্বিগুণ ছাওয়াবের অধিকারী হবে।” (বুখারী ও মুসলিম)
+        <br><br> রাসূল সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম বলেন: “তোমরা কুরআন পাঠ কর। কেননা কিয়ামতের দিবসে কুরআন তার পাঠকের জন্য সুপারিশ কারী হবে।” (মুসলিম)
+        <br><br> সুতরাং কুরআন শিক্ষা করা এবং রাতে, দিনে, ঘরে, বাইরে, ভ্রমণরত অবস্থার বিভিন্ন সময় কুরআন পাঠ করতে থাকা খুবই জরুরী। আর সহীহভাবে অর্থ বুঝে পড়ার জন্য কুরআন শিক্ষা করা এবং প্রতিদিন চর্চারত থাকা দরকার। হাদীসে বলা হয়েছে “একদল লোক কুরআন পাঠ করে, অথচ তা তাদের কন্ঠনালী অতিক্রম করে না। ( সহিহ মুসলিম ১৭৮১) ।
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+</body>
+</html>
+
+{% endblock content %}

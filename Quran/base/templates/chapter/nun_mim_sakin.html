@@ -1,0 +1,275 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>নুন ও মীম সাকিন</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="{% static 'styles/style_chapter.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <i class="bx bxl-audible icon"></i>
+      <div class="logo_name">কুরান শিক্ষা</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="{% url 'shurur-kotha' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">০. শুরুর কথা</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'okkhor' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">১. অক্ষর পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'makhraj' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">২. মাখরাজ পরিচিতি</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'shobdo' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৩. শব গঠনের চিহ্ন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'kolkola' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৪. কলকলা হরফ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'madd' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৫. মদ্দ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'gunnah' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৬. গুন্নাহ ও ওয়াজিব গুন্নাহ</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'nunmim' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৭. নুন সাকিন ও মীম সাকিন</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'other' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">৮. আরো কিছু নিয়ম</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'quiz' %}">
+          <i class="bx bx-folder"></i>
+          <span class="link_name"> কুইজ </span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+  
+  <!-- side content-->
+  <section class="home-section">
+    <div class="chapter">
+      <div class="text" style="color:white">নুন সাকিন ও তানবিন</div>
+      <div class="ptext">
+        <p>নূন সাকিন[نْ]  ও তানবীন [ ً ٍ ُ]-এর বর্ণনা<br>
+          নূন সাকিন [نْ]। জযমযুক্ত নূনকে নূন সাকিন বলা হয়। অর্থাৎ যে নূনের ওপর জযম [  ٨ ٫]  থাকে তাকে নূন সাকিন বলে।
+          তানবীনঃ  দুই যবর ( ً), দুই যের ( ٍ) ও দুই পেশকে ( ُ) তানবীন বলা হয়। তানবীনের মধ্যে একটি জযম যুক্ত নূন উহ্য অবস্থায় থাকে। উচ্চারণের সময় তা প্রকাশ পায়।<br>
+          নূন সাকিন ও তানবীনের হুকুমঃ— <br>
+          নূন সাকিন ও তানবীনের উচ্চারণ একই রকম। এজন্য এ দুটির বর্ণনা তাজবীদশাস্ত্রে একসাথে করা হয়। তাজবীদে নূন সাকিন ও তানবীনের হুকুম চারটি। অর্থাৎ চারটি নিয়মে নূন সাকিন ও তানবীনকে পড়তে হয়।  
+          এগুলো হলো— ১. <b>ইযহার</b>   ২. <b>ইকলাব</b>  ৩. <b>ইদগাম [বাগুন্নাহ - বেগুন্নাহ]</b> ও ৪. <b>ইখফা</b> । নিম্নে  এগুলো সম্পর্কে আলোচনা করা হল। <br><br>
+          <h4>১. ইযহার</h4>
+          ইযহার শব্দের অর্থ স্পষ্ট করে পড়া, প্রকাশ করে দেওয়া ইত্যাদি। তাজবীদের পরিভাষায় নূন সাকিন বা তানবীনের পর ইযহারের কোনো একটি হরফ আসলে ঐ নূন সাকিন বা তানবীনকে গুন্নাহ না করে স্পষ্টভাবে নিজ মাখরাজ থেকে পড়াকে ইযহার বলে।
+          ইযহারের হরফ মোট ছয়টি। যথা-  ‫ء -ه ‬-‫ح ‬-‫ع - غ - خ‬ 
+          [ইযহারের ছয় হরফ— হামঝাহ,হা, হ্বা, আ'ঈন, গঈন আর খ ],উদাহরণঃ—
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="ajrun.play()">اَجْرٌ غَيْرٌ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="wanhar.play()">وَ انْحَرْ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="minamal.play()">مِنْ عَمَلٍ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="minhum.play()">مِنْهُمْ </button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="kufuwan.play()">كُفُوًا اَحَدٌ</button><br><br>
+
+          <h4>২. ইকলাব </h4>
+          ইকলাব [কলব] অর্থ পরিবর্তন করে পড়া। তাজবীদের পরিভাষায় নূন সাকিন বা তানবীনের পর"ب"হরফ আসলে ঐ নূন সাকিন বা তানবীনকে 
+          মীম[م] দ্বারা পরিবর্তন করে এক আলিফ পরিমাণ গুন্নাহসহ পড়াকে ইকলাব বলে। 
+          ইকলাবের হরফ মাত্র একটি । এটি হলো- "ب"। উদাহরণঃ — 
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="mimbadi.play()">مِنۢ بَعْدِ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="alimum.play()">اَلِيْمٌ بِمَا</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="ambia.play()">‫اَنْبِيَاءُ</button>
+          । উল্লেখ্য, কুরআন মাজিদে ইকলাবের অবস্থায়[ ‫نْ‬ ] নূন সাকিন বা [ ً ٍ ُ ] তানবীনের পাশে-  ছোট করে মীম [م] হরফটি উল্লেখ থাকে।<br><br>
+          <h4>৩. ইদগাম</h4>
+          ইদগাম শব্দের অর্থ মিলিয়ে পড়া, এক জিনিসকে অন্য জিনিসের সাথে মেলানো। এক হরফকে অন্য হরফের সাথে মিলিয়ে পড়া।
+          তাজবীদের পরিভাষায় নূন সাকিন বা তানবীনের পর ইদগামের এই  { ي ‫ر‬ م ل و ن} <br><br>
+          ছয়টি [অক্ষরগুলোকে মনে রাখার জন্য একসংঙ্গে এদের বলা হয়— ' ইয়ারমালূন' ] হরফ থেকে কোনো একটি হরফ আসলে নূন সাকিন বা তানবীনের সাথে ঐ হরফকে মিলিয়ে পড়াকে ইদগাম বলা হয়।<br><br>
+          ইদগামের ফলে উভয় হরফ একই সময়ে উচ্চারিত হয়। ইদগামের ফলে নূন সাকিন বা তানবীনের পরবর্তী হরফটি তাশদীদ যুক্ত হয়। তাশদীদ থাক আর না থাক , তাশদীদ ধরে পড়তে হয়।যেমনঃ— ইদগামের হরফ মোট ছয়টি। যথাঃ—   ي ‫ر‬ م ل و ن  [ইয়ারমালূন]।     
+          ইদগাম মোট দুই প্রকার। যথা :—
+          <b>ক. গুন্নাহসহ ইদগাম বা  ইদগামে বাগুন্নাহ,</b>  
+          <b>খ. গুন্নাহ ছাড়া ইদগাম বা ইদগামে বেলাগুন্নাহ। </b><br>
+          <b>ক. গুন্নাহসহ ইদগাম বা ইদগামে বাগুন্নাহ ঃ </b>
+          নূনসাকিন বা তানবীনের পরে  ي و م ن  [ইয়াওয়ামিন] এই চারটি হরফের যেকোন একটি- আসলে নূন সাকিন বা 
+          তানবীনকে ঐ হরফের সাথে মিলিয়ে এক আলিফ সময় পরিমাণ গুন্নাহ করে পড়তে হয়। একে  ইদগামে বাগুন্নাহ বলে। যেমনঃ—
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="maiyasha.play()">مَنْ يَّشَۤاءُ‬</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="nafsio.play()">نَفْسٍ وَّمَا</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="rasulum.play()">رَسُوْلٌ ‬مِّنْ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="minnisa.play()">مِنْ نِّسَۤاءِ</button><br>
+          <b>খ.  গুন্নাহ ছাড়া ইদগাম বা ইদগামে বেলাগুন্নাহ ঃ</b>  ل - ر ['লাম' ও 'র'] এ দুটি-   হরফ নূন সাকিন ও তানবীনের পরে আসলে - 
+          সেই নূন সাকিন ও তানবীনকে গুন্নাহ ছাড়া শুধু ইদগাম করে [মিলিয়ে] পড়তে হয়। এটাকে ইদগামে বেগুন্নাহ বলে। যেমন—
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="mirrabi.play()">مِّنْ رَّبٍّ رَّحِيمٍ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="kullahu.play()">كُنْ لَّهُ</button><br><br>
+
+          <h4>৪. ইফফা</h4>
+          ইখফা অর্থ গোপন করে পড়া। ইখফার হরফ ১৫-টি, যথাঃ— 
+          ‎   ت ث ج د ذ ز     س ش ص ض ط ظ    ف ق ك 
+          মুখস্থ করার জন্য এরূপ পড়া যায়, যথাঃ— তায়ো ছায়ো জীমো দালো যালো ঝা — সীন শীন ছ্বোয়াদ, দ্বোয়াদ ত্বোয়া জোয়া ফা ক্ব কা।  
+          নূনসাকিন বা তানবীনের পর ইখফার ১৫ হরফ থেকে যেকোনো একটি হরফ এলে উক্ত নূনসাকিন বা তানবীনকে এক আলিফ সময় পরিমাণ দীর্ঘ গুন্নাহ করে পড়াকে ইখফা বলে।
+          নূন' সাকিন ঐ সব জায়গায় গুন্নাহ্ সহ 'ইখফা' করে পড়তে হয়।ইখ্ফার নূন সাকিন বাংলা অনুস্বারের মত উচ্চারণ হয়। যেমনঃ  {  أَ‫نْ‬تَ [=আংতা]} 
+          (তানবীনের ভিতরেও নূন সাকিন লুকায়িত থাকে)। নূন সাকিন [‫نْ‬]-এর মধ্যে ইখফার উদাহরণঃ <br>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="minqablika.play()">مِنْ قَبْلِكَ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="antum.play()">اَنْتُمْ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="litunjira.play()">لِتُنْذِرَ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="unjhila.play()">‫اُنْزِلَ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="shain.play()">شَىْءٍ قَدِيْرٌ</button>
+          <button class="btn btn-outline-primary" style="font-size:large" onclick="samawati.play()">سَمٰوَاتٍ طِبَاقًا</button>
+          
+
+        </p><br><hr>
+        
+      </div>
+
+      <div class="text" style="color:white">মীম সাকিন</div>
+      <div class="ptext">
+        <p>
+          মীম সাকিনের বিবরণ মীম সাকিন যযম ওয়ালা মীমকে বলে।মীম সাকিন তিন প্রকারে পড়া যায়। <b>১।ইখফা</b> <b>২।ইদগাম</b> <b>৩।ইজহার</b>। ইফখার হরফ একটি ب ইদগামের হরফ একটি م   বাকি ২৬ হরফ ইজহারের ।
+           দুইটিতে ইজহারে খাস و ف <br><br>
+           <b>১।মীম সাকিনের ইখফা:</b> মীম সাকিনের বামে ب মীম সাকিনের ইখফা।মীম সাকিনকে গুন্নাহ করিয়া পড়িতে হয়। <br>
+           যেমন: 
+           <button class="btn btn-outline-primary" style="font-size:large" onclick="tarmihim.play()">تَرْمِيْهِمْبِحِجَارَةٍ</button>
+           
+           <br><br>
+
+           <b>২।মীম সাকিনের ইদগাম:</b> মীম সাকিনের বামে م মীম সাকিনের ইদগাম। দ্বিতীয় মীমে তাশদীদ দিয়া গুন্নার সহিত মিলাইয়া পড়িতে হয়।  <br>
+           যেমন:
+           <button class="btn btn-outline-primary" style="font-size:large" onclick="atamahum.play()">اَطْعَمَهُمْ مِّنْ جُوْعٍ</button>
+
+           <br><br>
+           
+           <b>৩।মীম সাকিনের ইজহার:</b> মীম সাকিনের বামে ب م নাই মীম সাকিনের ইজহার।মীম সাকিনকে গুন্নাহ ছাড়া স্পষ্ট করিয়া পড়িতে হয়। <br> 
+           যেমন:
+           <button class="btn btn-outline-primary" style="font-size:large" onclick="alhamdu.play()">اَلْحَمْدُـ </button>
+            
+          </p><br><hr>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script src="{% static 'js/script_chapter.js' %}"></script>
+  <script>
+
+    // ijhar
+    const kufuwan = new Audio()
+    kufuwan.src = "{% static 'audio/nunmim/kufuwan.m4a' %}"
+
+    const minhum = new Audio()
+    minhum.src = "{% static 'audio/nunmim/minhum.m4a' %}"
+
+    const minamal = new Audio()
+    minamal.src = "{% static 'audio/nunmim/minamal.m4a' %}"
+
+    const wanhar = new Audio()
+    wanhar.src = "{% static 'audio/nunmim/wanhar.m4a' %}"
+
+    const ajrun = new Audio()
+    ajrun.src = "{% static 'audio/nunmim/ajrun.m4a' %}"
+
+    //iqlab
+    const ambia = new Audio()
+    ambia.src = "{% static 'audio/nunmim/ambia.m4a' %}"
+
+    const alimum = new Audio()
+    alimum.src = "{% static 'audio/nunmim/alimum.m4a' %}"
+
+    const mimbadi = new Audio()
+    mimbadi.src = "{% static 'audio/nunmim/mimbadi.m4a' %}"
+
+    // idgam
+    const minnisa = new Audio()
+    minnisa.src = "{% static 'audio/nunmim/minnisa.m4a' %}"
+
+    const rasulum = new Audio()
+    rasulum.src = "{% static 'audio/nunmim/rasulum.m4a' %}"
+
+    const nafsio = new Audio()
+    nafsio.src = "{% static 'audio/nunmim/nafsio.m4a' %}"
+
+    const maiyasha = new Audio()
+    maiyasha.src = "{% static 'audio/nunmim/maiyasha.m4a' %}"
+
+    const kullahu = new Audio()
+    kullahu.src = "{% static 'audio/nunmim/kullahu.m4a' %}"
+
+    const mirrabi = new Audio()
+    mirrabi.src = "{% static 'audio/nunmim/mirrabi.m4a' %}"
+
+    // ikhfa
+    const samawati = new Audio()
+    samawati.src = "{% static 'audio/nunmim/samawati.m4a' %}"
+
+    const shain = new Audio()
+    shain.src = "{% static 'audio/nunmim/shain.m4a' %}"
+
+    const unjhila = new Audio()
+    unjhila.src = "{% static 'audio/nunmim/unjhila.m4a' %}"
+
+    const litunjira = new Audio()
+    litunjira.src = "{% static 'audio/nunmim/litunjira.m4a' %}"
+
+    const antum = new Audio()
+    antum.src = "{% static 'audio/nunmim/antum.m4a' %}"
+
+    const minqablika = new Audio()
+    minqablika.src = "{% static 'audio/nunmim/minqablika.m4a' %}"
+
+    // mim sakin
+    const tarmihim = new Audio()
+    tarmihim.src = "{% static 'audio/nunmim/tarmihim.m4a' %}"
+
+    const atamahum = new Audio()
+    atamahum.src = "{% static 'audio/nunmim/atamahum.m4a' %}"
+
+    const alhamdu = new Audio()
+    alhamdu.src = "{% static 'audio/nunmim/alhamdu.m4a' %}"
+
+
+
+  </script>
+</body>
+</html>
+
+{% endblock content %}
